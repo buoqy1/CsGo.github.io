@@ -30,7 +30,9 @@ header h1 {
 .nav__input, .nav__label{
     display: none;
 }
-
+.subnav__input, .subnav__label{
+    display: none;
+}
 .nav__responsive-ul{
     display: none;
 }
@@ -77,7 +79,7 @@ header h1 {
     
     transition: all 1s;
 }
-.map:hover> .nav__container-li{
+.nav__li:hover .nav__container-li{
     position: absolute;
     margin:10px 0px 0px 3px;
     display: block;
@@ -314,6 +316,7 @@ header h1 {
         padding-left:22% ;
         margin-top: 0px;
         margin-bottom: 0px;
+        width: 100%;
     }
     .nav__ul{
         display: none;
@@ -321,27 +324,24 @@ header h1 {
     .nav__label{
         border: #000 solid 1px;
         display: block;
-        width: 5%;
+        height: 2.7%;
         cursor: pointer;
-        text-align: end;
+        text-align: right;
         font-size: 25px;
-        position: relative;
+        position: absolute;
         top: 25px;
         right: 20px;
     }
     .nav__input:checked + .nav__ul{
-        display: block;
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-        top: 25px;
+        top: 51px;
         right: 0px;
-        
         text-align: center;
         background-color: #6e6462;
         width: 100%;
-
         z-index: 1000;
     }
     .nav__li{
@@ -370,10 +370,11 @@ header h1 {
         transition: all 1s;
         top: 68px;
     }
-    .map{
-        transition: all 1s;
+    .subnav__label{
+        display: block;
+        cursor: pointer;
     }
-    .map:hover> .nav__container-li{
+    .subnav__input:checked + .nav__container-li{
         position: absolute;
         margin:10px 0px 0px 3px;
         display: block;
