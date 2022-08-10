@@ -33,9 +33,7 @@ header h1 {
 .subnav__input, .subnav__label{
     display: none;
 }
-.nav__responsive-ul{
-    display: none;
-}
+
 .nav{
     height: 110px;
     background-color: #725c40;
@@ -57,9 +55,7 @@ header h1 {
 .nav__li:hover >a{
     color: #fff;
 }
-.nav__li-map-cntainer{
-    display: none;
-}
+
 .nav__li a{
     color: #000;
     text-decoration: none;     
@@ -96,7 +92,15 @@ header h1 {
 .nav__li-ma:hover> a{
     color: #725c40;
 }
-
+.nav__input-responsive{
+    display: none;
+}
+.nav__label-responsive{
+    display: none;
+}
+.nav__ul-responsive{
+    display: none;
+}
 #inicio{
     display: grid;
     grid-template-rows: 350px repeat(4, 250px) 100px ;
@@ -293,7 +297,7 @@ header h1 {
 
 
 
-@media only screen and (max-width: 1000px){
+@media  (max-width: 1000px){
     header h1 {
         position:absolute;
         height: 100px;
@@ -303,14 +307,22 @@ header h1 {
         color:#20283f;
         display: flex;
         padding: 25px ;
-        margin: 5px 0px 5px 5px ;
+        margin: 3px 0px 5px 5px ;
         border: 4px outset #0d1019;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
     }
-    
     .nav{
+        display: none;
+    }
+    .nav__ul-responsive{
+        disply: none;
+    }
+    .nav__label, .nav__input{
+        display: none;
+    }
+    .nav-responsive{
         height: 110px;
         background-color: #725c40;
         padding-left:22% ;
@@ -318,10 +330,8 @@ header h1 {
         margin-bottom: 0px;
         width: 100%;
     }
-    .nav__ul{
-        display: none;
-    }
-    .nav__label{
+    
+    .nav__label-responsive{
         border: #000 solid 1px;
         display: block;
         height: 2.7%;
@@ -332,7 +342,13 @@ header h1 {
         top: 25px;
         right: 20px;
     }
-    .nav__input:checked + .nav__ul{
+    .nav__ul-responsive{
+        font-size: 20px;
+        text-align: right;
+        padding-right: 40px;
+        padding: 25px;   
+    }
+    .nav__input-responsive:checked + .nav__ul-responsive{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -344,41 +360,43 @@ header h1 {
         width: 100%;
         z-index: 1000;
     }
-    .nav__li{
+    .nav__li-responsive{
         transition: all 1s;
         display: inline-block;
         padding: 15px;
     }
-    .nav__li:hover >a{
+    .nav__li-responsive:hover >a{
         color: #fff;
     }
-    .nav__li-map-cntainer{
-        display: none;
-    }
-    .nav__li a{
+    
+    .nav__li-responsive a{
         color: #000;
         text-decoration: none;     
     }
-    .nav__li i{
+    .nav__li-responsive i{
         width: 30px;
         box-sizing: border-box;
         text-align: center;
     }
     
-    .nav__container-li{
+    .subnav__container-li{
         display: none;
         transition: all 1s;
         top: 68px;
     }
     .subnav__label{
-        display: block;
+        display:  block;
         cursor: pointer;
     }
-    .subnav__input:checked + .nav__container-li{
+    .subnav__input:checked + .subnav__container-li{
         position: absolute;
         margin:10px 0px 0px 3px;
         display: block;
         border: #000 solid 1px;
+    }
+    .subnav__input:d{
+        display: block;
+        padding: 15px;
     }
     .nav__li-ma{
         background-color: #87806c;
